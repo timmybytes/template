@@ -1,0 +1,8 @@
+{
+  "c": ["pages/index", "webpack"],
+  "r": [],
+  "m": [
+    "./src/components/Sample/Sample.tsx",
+    "./src/components/Sample/index.ts"
+  ]
+}
