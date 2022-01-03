@@ -10,3 +10,7 @@ This is a custom template for quickly getting new Next.js projects up and runnin
 - Husky+lint-staged hooks
 - Plop.js
 - Jest+React Testing Library
+
+## Getting Started
+
+## License
