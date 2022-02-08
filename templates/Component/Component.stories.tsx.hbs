@@ -1,0 +1,30 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React, { FC } from 'react';
+import { SectionWrapperProps } from '~/components/wrappers/SectionWrapper';
+import { TemplateName, TemplateNameProps } from './TemplateName';
+
+// Includes SectionProps which includes themeName prop
+type Component = FC<TemplateNameProps & SectionWrapperProps>;
+
+export default {
+  title: 'TemplateName',
+  component: TemplateName,
+} as ComponentMeta<Component>;
+
+const Template: ComponentStory<Component> = (args) => (
+  /*  Layout & theming wrappers:
+
+    - V-center a page section component
+      <div css={storyCssVCenter}>
+
+    - Center a plain non-section component
+      <div css={storyCssCenter}>
+
+    - Provide theme on a non-section component
+      <SectionWrapper fullscreen center {...args}>
+    */
+  <TemplateName {...args} />
+);
+
+export const Primary = Template.bind({});
+Primary.args = {};
