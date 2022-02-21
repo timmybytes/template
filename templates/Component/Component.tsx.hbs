@@ -1,14 +1,24 @@
-import {Box, Flex, Text} from '@chakra-ui/react';
-import styles from './{{pascalCase name}}.module.scss';
+import tw from 'twin.macro'
+import React, { FC } from 'react';
+import { CustomCssProps } from '~/config';
 
-type {{pascalCase name}}Props = {
+export type {{#if kljh}}{{pascalCase name}}{{/if}}Props = CustomCssProps & {
   children?: React.ReactNode;
 }
 
-export const {{pascalCase name}} = ({children, ...rest}: {{pascalCase name}}Props): React.ReactElement => {
+/**
+ * {{pascalCase name}}
+ */
+
+export const {{pascalCase name}}: FC<{{pascalCase name}}Props> = ({
+    children,
+    customCss
+  }) => {
   return (
-    <Box className={styles.root}{...rest}>
+    <Container>
       {children}
-    </Box>
-  );
-};
+    </Container>
+  )
+}
+
+const Container = tw.div``
