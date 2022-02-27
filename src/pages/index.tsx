@@ -7,7 +7,7 @@ export default function Home(): React.ReactNode {
   return (
     <div tw='flex flex-col justify-center items-center'>
       <Header />
-      <Main>
+      <Main tw='relative'>
         <Heading customCss={tw`font-extrabold text-4xl`}>Some Text</Heading>
         <Text>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus vero,

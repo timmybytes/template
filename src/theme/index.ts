@@ -4,7 +4,7 @@ import { fonts } from './fonts'
 import { styles } from './styles'
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: false,
 }
 
