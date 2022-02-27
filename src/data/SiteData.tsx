@@ -1,14 +1,17 @@
+import React from 'react'
+
+// FIXME: Update these before publishing
 // Info for HTML <head/> tags, Hero component, and Open Graph link sharing
 export const SITE_DATA = {
   title: 'template',
   description: 'A front-end template',
-  author: 'Timothy Merritt',
-  authorHandle: '@timmybytes', // For Twitter link cards
-  authorHomepage: 'https://timmybytes.com',
-  color: '#e9c46a',
-  repo: 'https://github.com/timmybytes/timmybytes',
-  url: 'https://timmybytes.com',
-  img: 'assets/banquet-card.png', // For Open Graph link preview, NOTE - SVG is not supported
+  author: '',
+  authorHandle: '', // For Twitter link cards
+  authorHomepage: '',
+  color: '',
+  repo: 'https://github.com/timmybytes/template',
+  url: '',
+  img: '', // For Open Graph link preview, NOTE - SVG is not supported
 }
 
 export const CustomHead = (): JSX.Element => (
