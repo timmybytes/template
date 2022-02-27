@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 export default function Home(): React.ReactNode {
   return (
-    <>
+    <div tw='flex flex-col justify-center items-center'>
       <Header />
       <Main>
         <Section>
@@ -26,9 +26,11 @@ export default function Home(): React.ReactNode {
           suscipit ea dolorum?
         </Section>
       </Main>
-    </>
+    </div>
   )
 }
 
-const Main = tw.main`w-full height[80vh]`
+const Main = tw.main`
+  flex flex-col justify-center items-center
+  w-full height[80vh]`
 const Section = tw.section`max-width[65ch] p-4`
