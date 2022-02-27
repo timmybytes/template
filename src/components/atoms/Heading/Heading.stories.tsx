@@ -1,18 +1,18 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React, { FC } from 'react';
-import { {{pascalCase name}}, {{pascalCase name}}Props } from './{{pascalCase name}}';
+import { Heading, HeadingProps } from './Heading';
 
 // Includes SectionProps which includes themeName prop
-type Component = FC<{{pascalCase name}}Props>;
+type Component = FC<HeadingProps>;
 
 export default {
-  title: '{{pascalCase name}}',
-  component: {{pascalCase name}},
+  title: 'Heading',
+  component: Heading,
 } as ComponentMeta<Component>;
 
 const Template: ComponentStory<Component> = (args) => (
     <div>
-      <{{pascalCase name}} {...args} />
+      <Heading {...args} />
     </div>
 );
 

@@ -1,3 +1,4 @@
+import { Heading } from '@components/atoms/Heading'
 import { Header } from '@components/organisms/Header'
 import React from 'react'
 import tw from 'twin.macro'
@@ -7,6 +8,7 @@ export default function Home(): React.ReactNode {
     <div tw='flex flex-col justify-center items-center'>
       <Header />
       <Main>
+        <Heading customCss={tw`font-extrabold text-4xl`}>Some Text</Heading>
         <Text>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus vero,
           reiciendis quas culpa veniam, laudantium aut sequi placeat inventore
