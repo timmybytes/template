@@ -1,8 +1,8 @@
-import tw from 'twin.macro'
+import tw, { css } from 'twin.macro'
 import React, { FC } from 'react';
-import { CustomCssProps } from '~/config';
+import { CustomCssProps } from '@/config';
 
-export type {{#if kljh}}{{pascalCase name}}{{/if}}Props = CustomCssProps & {
+export type {{pascalCase name}}Props = CustomCssProps & {
   children?: React.ReactNode;
 }
 
@@ -15,7 +15,7 @@ export const {{pascalCase name}}: FC<{{pascalCase name}}Props> = ({
     customCss
   }) => {
   return (
-    <Container>
+    <Container css={customCss}>
       {children}
     </Container>
   )

@@ -1,7 +1,6 @@
 # Logs
 logs
-*.log
-npm-debug.log*
+locanpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -28,5 +27,7 @@ yarn-error.log
 
 # Next
 .next/
+.next
 
+# TS buildinfo
 tsconfig.tsbuildinfo
