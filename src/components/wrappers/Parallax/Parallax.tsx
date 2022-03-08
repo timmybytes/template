@@ -12,7 +12,7 @@ import {
  * Parallax
  */
 
-type ParallaxProps = CustomCssProps & {
+export type ParallaxProps = CustomCssProps & {
   children: ReactNode
   spring?: boolean
   stiffness?: number
