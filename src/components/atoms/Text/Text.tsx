@@ -9,6 +9,8 @@ type StyleTypes = {
   bold?: boolean
   underline?: boolean
   italic?: boolean
+  uppercase?: boolean
+  lowercase?: boolean
 }
 
 export type TextProps = CustomCssProps &
@@ -23,6 +25,8 @@ export type TextProps = CustomCssProps &
  * @param bold Render bold font-weight
  * @param underline Render underline
  * @param italic Render italic
+ * @param uppercase Render uppercase
+ * @param lowercase Render lowercase
  * @returns
  */
 export const Text: FC<TextProps> = ({
@@ -30,20 +34,28 @@ export const Text: FC<TextProps> = ({
   bold,
   italic,
   underline,
+  uppercase,
+  lowercase,
   children,
   customCss,
 }) => {
   const As = as
-  const StyledText = styled(As)<StyleTypes>(({ bold, underline, italic }) => [
-    bold && tw`font-bold`,
-    underline && tw`underline`,
-    italic && tw`italic`,
-  ])
+  const StyledText = styled(As)<StyleTypes>(
+    ({ bold, underline, italic, uppercase, lowercase }) => [
+      bold && tw`font-bold`,
+      underline && tw`underline`,
+      italic && tw`italic`,
+      uppercase && tw`uppercase`,
+      lowercase && tw`lowercase`,
+    ]
+  )
   return (
     <StyledText
       bold={bold}
       underline={underline}
       italic={italic}
+      uppercase={uppercase}
+      lowercase={lowercase}
       css={customCss}
     >
       {children}
