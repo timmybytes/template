@@ -23,6 +23,14 @@ module.exports = {
       brandBlue: '#65afff',
       brandGray: '#2e4057',
     },
+    transitions: {
+      basic: '.3s',
+    },
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

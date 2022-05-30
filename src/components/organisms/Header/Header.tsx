@@ -1,3 +1,4 @@
+import { Toggle } from '@components/atoms/Toggle'
 import Link from 'next/link'
 import tw from 'twin.macro'
 
@@ -16,6 +17,7 @@ export const Header = (): React.ReactElement => {
             {link.name}
           </Link>
         ))}
+        <Toggle />
       </Nav>
     </Container>
   )

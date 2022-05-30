@@ -2,6 +2,7 @@ import { Heading } from '@components/atoms/Heading'
 import { Text } from '@components/atoms/Text'
 import { Header } from '@components/organisms/Header'
 import React from 'react'
+// import { ThemeContext } from '@emotion/react'
 import tw from 'twin.macro'
 
 export default function Home(): React.ReactNode {
@@ -41,4 +42,4 @@ export default function Home(): React.ReactNode {
 
 const Main = tw.main`
   flex flex-col justify-center items-center
-  w-full height[95vh]`
+  max-width[1200px] px-8 height[95vh]`
