@@ -19,6 +19,10 @@
     "target": "ESNext",
     "paths": {
       "@components/*": ["src/components/*"],
+      "@atoms/*": ["src/components/atoms/*"],
+      "@molecules/*": ["src/components/molecules/*"],
+      "@organisms/*": ["src/components/organisms/*"],
+      "@wrappers/*": ["src/components/wrappers/*"],
       "@data/*": ["src/data/*"],
       "@pages/*": ["src/pages/*"],
       "@public/*": ["public/*"],
