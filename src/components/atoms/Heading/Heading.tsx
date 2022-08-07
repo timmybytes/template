@@ -3,12 +3,25 @@ import { CustomCssProps } from '@/config'
 
 export type HeadingAs = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span'
 
-export type HeadingProps = CustomCssProps & {
-  /**
-   * Default 'h2'
-   */
-  as?: HeadingAs
+export type TypographyProps = {
+  bold?: boolean
+  italic?: boolean
+  underline?: boolean
+  strike?: boolean
+  center?: boolean
+  left?: boolean
+  right?: boolean
+  uppercase?: boolean
+  lowercase?: boolean
 }
+
+export type HeadingProps = CustomCssProps &
+  TypographyProps & {
+    /**
+     * Default 'h2'
+     */
+    as?: HeadingAs
+  }
 
 /**
  * Generic heading component

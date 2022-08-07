@@ -1,10 +1,21 @@
 import { CustomCssProps } from '@/config'
 import { typographyStyles } from '@/styles/Typography'
 import React, { FC } from 'react'
-import { TypographyProps } from 'types/typography'
 import { HeadingAs } from '../Heading'
 
 export type TextAs = 'p' | 'span' | 'strong' | 'em' | HeadingAs
+
+export type TypographyProps = {
+  bold?: boolean
+  italic?: boolean
+  underline?: boolean
+  strike?: boolean
+  center?: boolean
+  left?: boolean
+  right?: boolean
+  uppercase?: boolean
+  lowercase?: boolean
+}
 
 export type TextProps = CustomCssProps &
   TypographyProps & {

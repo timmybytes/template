@@ -1,5 +1,5 @@
 import tw from 'twin.macro'
-import { TypographyProps } from '@types/typography'
+import { TypographyProps } from '@/components/atoms/Text'
 
 export const typographyStyles = (props: TypographyProps) => {
   const {
