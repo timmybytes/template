@@ -42,7 +42,7 @@ export default plop => {
             value: 'templates',
           },
           {
-            name: 'Wrappers',
+            name: 'Wrapper',
             value: 'wrappers',
           },
         ],

@@ -1,20 +1,13 @@
 import { CustomCssProps } from '@/config'
+import { typographyStyles } from '@/styles/Typography'
 import React, { FC } from 'react'
-import tw, { styled } from 'twin.macro'
+import { TypographyProps } from 'types/typography'
 import { HeadingAs } from '../Heading'
 
 export type TextAs = 'p' | 'span' | 'strong' | 'em' | HeadingAs
 
-type StyleTypes = {
-  bold?: boolean
-  underline?: boolean
-  italic?: boolean
-  uppercase?: boolean
-  lowercase?: boolean
-}
-
 export type TextProps = CustomCssProps &
-  StyleTypes & {
+  TypographyProps & {
     as?: TextAs
     children?: React.ReactNode
   }
@@ -25,6 +18,10 @@ export type TextProps = CustomCssProps &
  * @param bold Render bold font-weight
  * @param underline Render underline
  * @param italic Render italic
+ * @param strike Render strike through
+ * @param center Render text-center
+ * @param left Render text-left
+ * @param right Render text-right
  * @param uppercase Render uppercase
  * @param lowercase Render lowercase
  * @returns
@@ -34,31 +31,36 @@ export const Text: FC<TextProps> = ({
   bold,
   italic,
   underline,
+  strike,
+  center,
+  left,
+  right,
   uppercase,
   lowercase,
   children,
   customCss,
 }) => {
   const As = as
-  const StyledText = styled(As)<StyleTypes>(
-    ({ bold, underline, italic, uppercase, lowercase }) => [
-      bold && tw`font-bold`,
-      underline && tw`underline`,
-      italic && tw`italic`,
-      uppercase && tw`uppercase`,
-      lowercase && tw`lowercase`,
-    ]
-  )
   return (
-    <StyledText
-      bold={bold}
-      underline={underline}
-      italic={italic}
-      uppercase={uppercase}
-      lowercase={lowercase}
-      css={customCss}
+    <As
+      css={[
+        typographyStyles({
+          bold,
+          italic,
+          underline,
+          strike,
+          center,
+          left,
+          right,
+          uppercase,
+          lowercase,
+        }),
+        customCss,
+      ]}
     >
       {children}
-    </StyledText>
+    </As>
   )
 }
+
+export const TextTest = ({ children }) => <p>{children}</p>

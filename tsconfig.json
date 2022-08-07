@@ -26,6 +26,7 @@
       "@styles/*": ["src/styles/*"],
       "@theme/*": ["src/theme/*"],
       "@utils/*": ["src/utils/*"],
+      "@types/*": ["types/*"],
       "@/*": ["src/*"]
     },
     "incremental": true
