@@ -1,3 +1,2 @@
-export * from './UseToggle'
-
 export * from './useToggle'
+export * from './useWindowSize'
