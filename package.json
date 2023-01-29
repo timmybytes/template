@@ -41,16 +41,13 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@fontsource/inter": "^4.5.0",
-    "@fontsource/playfair-display": "^4.5.0",
-    "@storybook/react": "^6.4.9",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "framer-motion": "^6.2.6",
     "next": ">=12.2.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.36.0",
-    "storybook": "^6.4.9"
+    "sass": "^1.36.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
