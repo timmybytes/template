@@ -1,0 +1,23 @@
+import tw from 'twin.macro'
+import React, { FC, ReactNode } from 'react';
+import { CustomCssProps } from '@/config';
+
+export type {{name}}Props = CustomCssProps & {
+  children?: ReactNode
+}
+
+/**
+ * {{name}}
+ */
+export const {{name}}: FC<{{name}}Props> = ({
+    children,
+    customCss
+  }) => {
+  return (
+    <Container css={customCss}>
+      {children}
+    </Container>
+  )
+}
+
+const Container = tw.div``

@@ -1,34 +1,33 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      purple: colors.violet,
-      pink: colors.pink,
-      brandWhite: '#F9F4F5',
-      brandBlack: '#161925',
-      brandYellow: '#e9c46a',
-      brandRed: '#D44D5C',
-      brandBlue: '#65afff',
-      brandGray: '#2e4057',
-    },
-    transitions: {
-      basic: '.3s',
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
     },
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+      backgroundColor: {
+        primary: 'var(--bg-primary)',
+        secondary: 'var(--bg-secondary)',
+        tertiary: 'var(--bg-tertiary)',
+      },
+      textColor: {
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        tertiary: 'var(--text-tertiary)',
+      },
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        brandWhite: 'var(--brand-red)',
+        brandBlack: 'var(--brand-black)',
+        brandYellow: 'var(--brand-yellow)',
+        brandRed: 'var(--brand-red)',
+        brandBlue: 'var(--brand-blue)',
+        brandGray: 'var(--brand-gray)',
       },
     },
   },
