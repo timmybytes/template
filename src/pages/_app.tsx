@@ -1,4 +1,3 @@
-import { ThemeContextProvider } from '@/context/ThemeContext'
 import '@fontsource/inter/200.css'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
@@ -13,9 +12,9 @@ export default function App({
   pageProps,
 }: AppProps): React.ReactElement {
   return (
-    <ThemeContextProvider>
+    <>
       <GlobalStyles />
       <Component {...pageProps} />
-    </ThemeContextProvider>
+    </>
   )
 }

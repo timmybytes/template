@@ -1,73 +1,40 @@
-import React, { FC } from 'react'
 import { CustomCssProps } from '@/config'
-import { typographyStyles } from '@/styles/Typography'
+import { motion, MotionProps } from 'framer-motion'
+import { FC, ReactNode } from 'react'
 
 export type HeadingAs = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span'
 
-export type TypographyProps = {
-  bold?: boolean
-  italic?: boolean
-  underline?: boolean
-  strike?: boolean
-  center?: boolean
-  left?: boolean
-  right?: boolean
-  uppercase?: boolean
-  lowercase?: boolean
-}
-
 export type HeadingProps = CustomCssProps &
-  TypographyProps & {
+  MotionProps & {
     /**
      * Default 'h2'
      */
     as?: HeadingAs
+    children?: ReactNode
   }
 
 /**
- * Generic heading component
- * @param bold Render bold font-weight
- * @param underline Render underline
- * @param italic Render italic
- * @param strike Render strike through
- * @param center Render text-center
- * @param left Render text-left
- * @param right Render text-right
- * @param uppercase Render uppercase
- * @param lowercase Render lowercase
- * @returns
+ * Generic heading component with motion
  */
 export const Heading: FC<HeadingProps> = ({
   as = 'h2',
-  bold,
-  italic,
-  underline,
-  strike,
-  center,
-  left,
-  right,
-  uppercase,
-  lowercase,
   children,
+  initial,
+  animate,
+  exit,
+  transition,
+  variants,
   customCss,
 }) => {
-  const As = as
+  const As = motion[as]
   return (
     <As
-      css={[
-        typographyStyles({
-          bold,
-          italic,
-          underline,
-          strike,
-          center,
-          left,
-          right,
-          uppercase,
-          lowercase,
-        }),
-        customCss,
-      ]}
+      initial={initial}
+      animate={animate}
+      exit={exit}
+      transition={transition}
+      variants={variants}
+      css={customCss}
     >
       {children}
     </As>
